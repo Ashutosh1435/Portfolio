@@ -74,6 +74,7 @@ img{
     max-width: 100%;
     height: auto;
     display: block; // borra los espacios en blanco
+    border-radius: 20px;
 }
 
 /*===== CLASS CSS ===== */
@@ -220,6 +221,7 @@ img{
     }
 
     &__img{
+        
         position: absolute;
         right: 0;
         bottom: 0;
@@ -306,13 +308,22 @@ img{
         width: 95%;
     }
     &__css{
-        width: 85%;
+        width: 80%;
     }
     &__js{
-        width: 65%;
+        width: 75%;
     }
-    &__ux{
+    &__react{
         width: 85%;
+    }
+    &__node{
+        width: 80%;
+    }
+    &__mongodb{
+        width: 75%;
+    }
+    &__express{
+        width: 80%;
     }
     &__img{
         border-radius: .5rem;
@@ -438,6 +449,7 @@ img{
         &__img{
             width: 457px;
             bottom: 15%;
+            // border-radius: 10px;
         }
     }
 
@@ -487,4 +499,12 @@ img{
             right: 10%;
         }
     }
+}
+.top-image {
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+#confirmation {
+    float: left;
+    margin: 5px 0px;
 }

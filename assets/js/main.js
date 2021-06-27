@@ -1,3 +1,25 @@
+function sendMail() {
+    var Button = document.getElementById("btn");
+    var confirm = document.getElementById("confirmation")
+    var tempParams = {
+        from_name: document.getElementById("fromName").value,
+        from_email: document.getElementById("fromEmail").value,
+        message: document.getElementById("message").value,
+    }
+    emailjs.send("gmail", "template_rokcrin", tempParams)
+        .then(function (res) {
+            console.log("success", res.status);
+            document.getElementById("fromName").value = "";
+            document.getElementById("fromEmail").value = "";
+            document.getElementById("message").value = "";
+            Button.setAttribute('disabled', true);
+            confirm.innerHTML = "Email Sent Successfully"
+        })
+        .catch(function (error) {
+            console.log(error);
+        })
+}
+
 /*===== MENU SHOW =====*/ 
 const showMenu = (toggleId, navId) =>{
     const toggle = document.getElementById(toggleId),
